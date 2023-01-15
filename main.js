@@ -449,29 +449,29 @@ diferent(arrayCompare);
 
 
 function tresEnRaya (array){
-    let winer= 0;
+    let winner= 0;
     for (let i = 0 ; i<array.length ; i++){
         arrayAdd=array[0].concat(array[1]).concat(array[2]);
     }
     for(let i =0; i<arrayAdd.length ; i++){
         if((arrayAdd[0] === arrayAdd[1])&&(arrayAdd[0] === arrayAdd[2])){
-            winer = arrayAdd[0];
+            winner = arrayAdd[0];
         }else if((arrayAdd[0] === arrayAdd[3])&&(arrayAdd[0] === arrayAdd[6])){
-            winer = arrayAdd[0];
+            winner = arrayAdd[0];
         }else if((arrayAdd[0] === arrayAdd[4])&&(arrayAdd[0] === arrayAdd[8])){
-            winer = arrayAdd[0];
+            winner = arrayAdd[0];
         }else if ((arrayAdd[2] === arrayAdd[4])&&(arrayAdd[2] === arrayAdd[6])){
-            winer = arrayAdd[2];
+            winner = arrayAdd[2];
         }else if ((arrayAdd[2] === arrayAdd[5])&&(arrayAdd[2] === arrayAdd[8])){
-            winer = arrayAdd[2];
+            winner = arrayAdd[2];
         }else if((arrayAdd[3] === arrayAdd[4])&&(arrayAdd[3] === arrayAdd[5])){
-            winer = arrayAdd[3];
+            winner = arrayAdd[3];
         }else if((arrayAdd[1] === arrayAdd[4])&&(arrayAdd[1] === arrayAdd[7])){
-            winer = arrayAdd[1];
+            winner = arrayAdd[1];
         }else if((arrayAdd[6] === arrayAdd[7])&&(arrayAdd[6] === arrayAdd[8])){
-            winer = arrayAdd[6];
+            winner = arrayAdd[6];
         }else if(arrayAdd[i] === 0){
-            winer = -1;
+            winner = -1;
         }
     }
     console.log(winer);
