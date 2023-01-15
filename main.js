@@ -407,11 +407,12 @@ function diferent (array){
 
     for(let i = 0 ; i<array.length ; i++){
 
-        if ( (array[i].split('').sort().toString() !== array[i+1].split('').sort().toString()  )&& (array[i].split('').sort().toString() !== array[i-1].split('').sort().toString()  )){ 
+        if ( (array[i].split('').sort().toString() !== array[array.length-1].split('').sort().toString()) && (array[i].split('').sort().toString() !== array[array.length-2].split('').sort().toString()) ){ 
             console.log(array[i]);
         }    
 
     }
+    
 };
 
 diferent(arrayCompare);
