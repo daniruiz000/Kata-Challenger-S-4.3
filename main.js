@@ -489,6 +489,7 @@ validarSolucion([
 ]); // => true
 
 */
+
 let sudokuIntro = [
     [5, 3, 4, 6, 7, 8, 9, 1, 2],
     [6, 7, 2, 1, 9, 5, 3, 4, 8],
@@ -501,15 +502,22 @@ let sudokuIntro = [
     [3, 4, 5, 2, 8, 6, 1, 7, 9]
   ];
 
+
+
 function sudoku (array){
-    let serieRequired = [1,2,3,4,5,6,7,8,9];
-    newArray = array[0].concat(array[1]).concat(array[2]).concat(array[3]).concat(array[4]).concat(array[5]).concat(array[6]).concat(array[7]).concat(array[8])
-    let cuadricula =[];
-    for(let i = 0; i<newArray ; i++){
-        cuadricula.push(newArray[i]);
-          
+    
+    let serieRequired = [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9];
+    let serieRequiredtoString = serieRequired.toString();
+    let newArray =[];
+    let sudokuResult = false;
+  
+    for( let i = 0 ; i<array.length ; i++ ){
+        newArray = (newArray.concat(array[i]));
+        let newArrayOrderToString = newArray.sort().toString();
+    
+        if (newArrayOrderToString === serieRequiredtoString) sudokuResult = true;
     }
-    console.log(cuadricula);   
+    console.log(sudokuResult);    
 };
 
 sudoku(sudokuIntro);
