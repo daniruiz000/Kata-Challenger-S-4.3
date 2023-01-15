@@ -449,7 +449,7 @@ diferent(arrayCompare);
 
 
 function tresEnRaya (array){
-    let winer=0;
+    let winer= 0;
     for (let i = 0 ; i<array.length ; i++){
         arrayAdd=array[0].concat(array[1]).concat(array[2]);
     }
@@ -470,14 +470,16 @@ function tresEnRaya (array){
             winer = arrayAdd[1];
         }else if((arrayAdd[6] === arrayAdd[7])&&(arrayAdd[6] === arrayAdd[8])){
             winer = arrayAdd[6];
+        }else if(arrayAdd[i] === 0){
+            winer = -1;
         }
     }
     console.log(winer);
 };
 
-tresEnRaya([ [ 0, 2, 1],
-             [ 0, 1, 2],
-             [ 1, 1, 0] ]);
+tresEnRaya([ [ 1, 2, 1],
+             [ 2, 1, 1],
+             [ 2, 2, 0] ]);
 
 
 
