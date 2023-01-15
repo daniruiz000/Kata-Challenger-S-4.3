@@ -474,7 +474,7 @@ function tresEnRaya (array){
             winner = -1;
         }
     }
-    console.log(winer);
+    console.log(winner);
 };
 
 tresEnRaya([ [ 1, 2, 1],
