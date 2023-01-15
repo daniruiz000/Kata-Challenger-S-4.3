@@ -401,9 +401,20 @@ zeroToEnd(listIntro);
      Salida : 'foo’
 */
 
+let arrayCompare = ['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'];
 
+function diferent (array){
 
+    for(let i = 0 ; i<array.length ; i++){
 
+        if ( (array[i].split('').sort().toString() !== array[i+1].split('').sort().toString()  )&& (array[i].split('').sort().toString() !== array[i-1].split('').sort().toString()  )){ 
+            console.log(array[i]);
+        }    
+
+    }
+};
+
+diferent(arrayCompare);
 
 
 
@@ -503,7 +514,7 @@ let sudokuIntro = [
   ];
 
 
-  
+
 
 function sudoku (array){
 
